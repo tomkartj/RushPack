@@ -1,0 +1,55 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Cars</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="setDefault()">Set Default</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Currency Format</ion-label>
+    <ion-input [(ngModel)]="currency"></ion-input>
+    <button ion-button item-right (click)="updateCurrency()">Update</button>
+  </ion-item>
+  <br/><br/>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Icon</th>
+        <th>Fare / Km</th>
+        <th>More</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" [(ngModel)]="newCar.name"/></td>
+          <td><input type="text" [(ngModel)]="newCar.icon"/></td>
+          <td><input type="text" [(ngModel)]="newCar.price"/></td>
+          <td><a href="#" (click)="add()">Add New Car</a></td>
+        </tr>
+      </tbody>
+    </table>
+  <br/><br/>
+  <h4 style="text-align:center">All Car Types - ({{cars.length}})</h4>
+  <br/>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Icon</th>
+      <th>Fare / Km ({{this.currency}})</th>
+      <th>More</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars;let i = index">
+        <td><input type="text" [(ngModel)]="cars[i].name"/></td>
+        <td><input type="text" [(ngModel)]="cars[i].icon"/></td>
+        <td><input type="text" [(ngModel)]="cars[i].price"/></td>
+        <td><a href="#" (click)="update(i)">Save</a> - <a href="#" (click)="delete(car.key)">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</ion-content>

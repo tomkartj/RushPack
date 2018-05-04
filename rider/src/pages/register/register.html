@@ -1,0 +1,32 @@
+<ion-content>
+    <!-- Logo -->
+    <div padding text-center class="header">
+      <div class="logo secondary-bg">
+        <ion-icon name="ios-car" color="light"></ion-icon>
+      </div>
+      <h2 ion-text color="light">Register</h2>
+    </div>
+
+  <ion-list class="list-form" padding no-lines>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="name" placeholder="Your name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="email" [(ngModel)]="email" placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="tel" [(ngModel)]="phoneNumber" placeholder="Phone Number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="password" placeholder="Password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button block padding (click)="signup()">
+          Create account
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+    <button ion-button clear block (click)="login()">ALREADY HAVE AN ACCOUNT?</button>
+</ion-footer>

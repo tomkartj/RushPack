@@ -1,0 +1,23 @@
+<ion-content>
+    <div padding text-center class="header">
+      <div class="logo secondary-bg">
+        <ion-icon name="ios-car" color="light"></ion-icon>
+      </div>
+      <h2 ion-text color="light">Login</h2>
+    </div>
+    <ion-list class="list-form" no-lines padding>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="password" placeholder="Password"></ion-input>
+        <button ion-button clear item-right (click)="reset()" [disabled]="email.length == 0">Forget ?</button>
+      </ion-item>
+      <ion-item>
+        <button padding ion-button block (click)="login()">LOGIN</button>
+      </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer *ngIf="isRegisterEnabled">
+  <button ion-button clear block (click)="signup()">DON'T HAVE AN ACCOUNT?</button>
+</ion-footer>

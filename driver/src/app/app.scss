@@ -1,0 +1,50 @@
+// http://ionicframework.com/docs/v2/theming/
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+
+// import page css
+
+// global styles
+
+// auth page
+.logo {
+  margin: 20px auto 0;
+  padding: 0.3em 1.4em 0.2em 0.4em;
+  width: 1.5em;
+  border-radius: 10%;
+  font-size: 3em;
+}
+.header{
+  background: color($colors, primary)
+}
+
+.list-md .item-input:last-child{
+  border: none;
+}
+
+.item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner{
+  border:none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.input-has-focus:last-child{
+  border:none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+ion-input {
+  border: 1px solid #eee;
+  margin: 2px;
+}
+
+#docsPDF, #avatar{
+  display:none;
+}

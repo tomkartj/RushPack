@@ -1,0 +1,144 @@
+// http://ionicframework.com/docs/v2/theming/
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+
+// position
+
+.header{
+  background: color($colors, primary)
+}
+
+.list-md .item-input:last-child{
+  border: none;
+}
+
+.item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner{
+  border:none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.input-has-focus:last-child{
+  border:none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+ion-input {
+  border: 1px solid #eee;
+  margin: 2px;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.rlt {
+  position: relative;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.primary-bg {
+  background-color: color($colors, primary);
+  color: #fff;
+}
+
+.light {
+  color: color($colors, light);
+}
+
+
+
+// text style
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-hint {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.modal-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.round {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+// position
+.align-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+}
+
+.list-no-border {
+
+  .item:first-child {
+    border: none;
+  }
+  .item:last-child {
+    border: none;
+  }
+
+  .item-inner {
+    border: none;
+  }
+}
+
+.list-full-border {
+  @extend .list-no-border;
+
+  .item,
+  .item:first-child {
+    border-bottom: 1px solid color($colors, border-color);
+
+    .item-inner {
+      border: none;
+    }
+  }
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+// auth page
+.logo {
+  margin: 20px auto 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.2em;
+  font-size: 2.5em;
+}
+
+a {
+  text-decoration: none;
+}
